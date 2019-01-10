@@ -8,6 +8,8 @@ clean:
 install:
 	if [ -d /lib/xtables ]; then \
 	  install -g root -o root -m 644 $(LIBS) /lib/xtables/ ; \
+	elif [ -d /lib64/xtables ]; then \
+	  install -g root -o root -m 644 $(LIBS) /lib64/xtables/ ; \
 	elif [ -d /usr/lib/x86_64-linux-gnu/xtables ]; then \
 	  install -g root -o root -m 644 $(LIBS) /usr/lib/x86_64-linux-gnu/xtables; \
 	elif [ -d /usr/lib/i386-linux-gnu/xtables ]; then \
